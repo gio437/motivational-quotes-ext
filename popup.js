@@ -1,12 +1,17 @@
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        console.log('message recieved');
-        if (request.greeting === "hello") {
-            sendResponse({farewell: "goodbye"});
-        }
-    })
+// Listen for messages from the background script
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    console.log("Message received in content script:", request);
 
-console.log('hello');
+    // Process the message
+    if (request.action === "tab_created") {
+        // Perform actions specific to the opening of a new tab
+        let data = { message: "Content script received message from background script" };
+        
+        // Send a response back to the background script
+        sendResponse(data);
+    }
+});
+
 let arr = [];
 const getQuotes = fetch("https://type.fit/api/quotes")
     .then((res) => res.json())
