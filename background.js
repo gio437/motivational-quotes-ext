@@ -6,7 +6,7 @@ chrome.tabs.onCreated.addListener(function() {
     .then((data) => {
         arr = data;
         console.log(arr);
-        checkQuotes(arr);
+        getRandomQuote(arr);
     })
     .catch((err) => {
         console.log('Error fetching quotes', err);
@@ -14,12 +14,9 @@ chrome.tabs.onCreated.addListener(function() {
     console.log(getQuotes);
 });
 
-// if you arent gonna store locally maybe just make a random function? 
-const checkQuotes = (arr) => {
+const getRandomQuote = (arr) => {
     const random = Math.floor(Math.random() * arr.length);
     displayNotification(arr[random].text);
-    // quoteCount++;
-    // quoteCount == arr.length ? quoteCount = 0 : false;
 }
 
 const displayNotification = (quote) => {
@@ -27,7 +24,7 @@ const displayNotification = (quote) => {
         {
             title: 'Motivational Quote',
             message: `${quote}`,
-            iconUrl: "logo.png",
+            iconUrl: "pictures/logo128.png",
             type: 'basic',
             silent: true
         }

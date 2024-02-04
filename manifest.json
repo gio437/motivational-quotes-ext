@@ -1,7 +1,15 @@
 {
-    "name": "daily quotes",
+    "name": "motivational quotes",
     "version": "1.0.0",
-    "description": "Will give you quotes to help motivate you",
+    "description": "Will give you quote notifications to help motivate you",
+    "action": {
+        "default_icon": "pictures/logo16.png",
+        "icons": {
+            "16": "pictures/logo16.png",
+            "48": "pictures/logo48.png",
+            "128": "pictures/logo128.png"
+        }
+    },
     "manifest_version": 3,
     "author": "Giovanni S",
     "permissions": [
