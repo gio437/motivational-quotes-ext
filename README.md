@@ -39,8 +39,7 @@ Contributions to the Motivational Quotes Chrome Extension project are welcome! T
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
-3. Make your changes and ensure they adhere to the project's coding standards.
-4. Submit a pull request detailing the changes you've made and any relevant information.
+3. Submit a pull request detailing the changes you've made and any relevant information.
 
 ---
 
