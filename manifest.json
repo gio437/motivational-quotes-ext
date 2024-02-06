@@ -1,6 +1,6 @@
 {
-    "name": "motivational quotes",
-    "version": "1.0.0",
+    "name": "Motivational Quotes",
+    "version": "1.0.2",
     "description": "Will give you quote notifications to help motivate you",
     "action": {
         "default_icon": "pictures/logo16.png",

@@ -16,14 +16,14 @@ chrome.tabs.onCreated.addListener(function() {
 
 const getRandomQuote = (arr) => {
     const random = Math.floor(Math.random() * arr.length);
-    displayNotification(arr[random].text);
+    displayNotification(arr[random].text, arr[random].author);
 }
 
-const displayNotification = (quote) => {
+const displayNotification = (quote, author) => {
     chrome.notifications.create(
         {
             title: 'Motivational Quote',
-            message: `${quote}`,
+            message: `${quote} ${author}`,
             iconUrl: "pictures/logo128.png",
             type: 'basic',
             silent: true
